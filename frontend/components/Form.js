@@ -95,7 +95,7 @@ export default function Form() {
   return (
     <form onSubmit={onSubmit}>
       <h2>Order Your Pizza</h2>
-      {success && <div className='success'>Thank you for your order, {fullName}!</div>}
+      {success && <div className='success'>Thank you for your order, {fullName}! Your {size} pizza with {toppings?.length || "no"} topping{toppings && toppings.length === 1 ? "" : "s"}</div>}
       {error && <div className='failure'>Something went wrong</div>}
 
       <div className="input-group">
